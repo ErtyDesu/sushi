@@ -1,0 +1,42 @@
+<%= form_with(model: prodotti) do |form| %>
+  <% if prodotti.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prodotti.errors.count, "error") %> prohibited this prodotti from being saved:</h2>
+
+      <ul>
+        <% prodotti.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :codice %>
+    <%= form.text_field :codice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numeropezzi %>
+    <%= form.number_field :numeropezzi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ingredienti %>
+    <%= form.text_area :ingredienti %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prezzo %>
+    <%= form.number_field :prezzo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
