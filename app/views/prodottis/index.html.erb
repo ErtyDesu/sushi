@@ -2,7 +2,7 @@
 
 <h1>Prodottis</h1>
 
-<table>
+<table class=table>
   <thead>
     <tr>
       <th>Codice</th>
@@ -22,7 +22,7 @@
         <td><%= prodotti.numeropezzi %></td>
         <td><%= prodotti.ingredienti %></td>
         <td><%= prodotti.prezzo %></td>
-        <td><%= link_to 'Show', prodotti %></td>
+        <td><%= link_to 'Show', prodotti, class:'' %></td>
         <td><%= link_to 'Edit', edit_prodotti_path(prodotti) %></td>
         <td><%= link_to 'Destroy', prodotti, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
