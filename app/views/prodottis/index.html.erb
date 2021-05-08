@@ -17,6 +17,11 @@
   <tbody>
     <% @prodottis.each do |prodotti| %>
       <tr>
+        <td>
+          <% if prodottis.cover.attached? %>
+          <%= image_tag url_for(prodottis.cover) ,:class => "w-50"%>
+          <% end %>
+        </td>
         <td><%= prodotti.codice %></td>
         <td><%= prodotti.nome %></td>
         <td><%= prodotti.numeropezzi %></td>
