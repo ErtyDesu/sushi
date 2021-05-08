@@ -11,32 +11,53 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :codice %>
-    <%= form.text_field :codice %>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm form-label">
+          <%= form.label :codice, class: 'form-label'%>
+          <%= form.text_field :codice, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm form-label">
+          <%= form.label :nome, class: 'form-label'%>
+          <%= form.text_field :nome, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm form-label">
+          <%= form.label :numeropezzo, class: 'form-label' %>
+          <%= form.text_field :numeropezzi, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm form-label">
+          <%= form.label :ingredienti, class: 'form-label' %>
+          <%= form.text_field :ingredienti, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm form-label">
+          <%= form.label :prezzo, class: 'form-label' %>
+          <%= form.text_field :prezzo, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    <div class="actions btn btn-primary">
+      <%= form.submit %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
-  </div>
-
-  <div class="field">
-    <%= form.label :numeropezzi %>
-    <%= form.number_field :numeropezzi %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ingredienti %>
-    <%= form.text_area :ingredienti %>
-  </div>
-
-  <div class="field">
-    <%= form.label :prezzo %>
-    <%= form.number_field :prezzo %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
+

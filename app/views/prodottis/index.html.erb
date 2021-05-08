@@ -2,7 +2,7 @@
 
 <h1>Prodottis</h1>
 
-<table>
+<table class=table>
   <thead>
     <tr>
       <th>Codice</th>
@@ -22,9 +22,8 @@
         <td><%= prodotti.numeropezzi %></td>
         <td><%= prodotti.ingredienti %></td>
         <td><%= prodotti.prezzo %></td>
-        <td><%= link_to 'Show', prodotti %></td>
-        <td><%= link_to 'Edit', edit_prodotti_path(prodotti) %></td>
-        <td><%= link_to 'Destroy', prodotti, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a><button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_prodotti_path(prodotti) %></button></a></td>
+        <td><a><button type="button" class="btn btn-danger"><%= link_to 'Destroy', prodotti, method: :delete, data: { confirm: 'sei sicuro?' } %></button></a></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +31,5 @@
 
 <br>
 
-<%= link_to 'New Prodotti', new_prodotti_path %>
+<a href="prodottis/new"><button type="button" class="btn btn-primary">Nuovo Prodotto</button></a>
+
