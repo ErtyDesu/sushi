@@ -16,5 +16,14 @@
 
  body{
      text-align: center;
+     background-color: white;
  }
+ 
+.tabela{
+     text-align: left !important;
+     
+ }
+
+
+
  
