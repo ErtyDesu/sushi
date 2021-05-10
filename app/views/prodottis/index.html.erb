@@ -2,6 +2,10 @@
 
 <h1>Prodottis</h1>
 
+<% if user_signed_in? %>
+  Benvenuto <b><%= current_user.email %></b>!
+  <br><%= link_to "Log Out", destroy_user_session_path, method: :delete
+
 <table class=table>
   
 
