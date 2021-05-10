@@ -1,5 +1,10 @@
 <h1>Nuovo Prodotto</h1>
 
+<% if user_signed_in? %>
+  Benvenuto <b><%= current_user.email %></b>!
+  <br><%= link_to "Log Out", destroy_user_session_path, method: :delete
+<% end %>
+
 <%= render 'form', prodotti: @prodotti %>
  
 <br>
